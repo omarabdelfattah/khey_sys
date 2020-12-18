@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AdminLTE 2 | Data Tables</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.4 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="skin-blue sidebar-mini" dir="rtl">
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>الخير</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>جمعية الخير</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">محمد أحمد</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar" style="height: auto;">
+
+
+
+
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa  fa-list"></i>                            
+                            <span>المساجد</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المساجد</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مسجد</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa  fa-archive"></i>                            
+                            <span>المخازن</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المخازن</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مخزن</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> موارد المخزن </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-th" aria-hidden="true"></i>                            
+                            <span>الموارد</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة الموارد</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مورد</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>                            
+                            <span>الطلبات</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة الطلبات</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-users"></i>                            
+                            <span>المستخدمين</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المستخدمين</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مستخدم</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <div class="content-wrapper" style="min-height: 921px;">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1 class="">
+                    إدارة المساجد
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
+                    <li><a href="#">إدارة المساجد</a></li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">بيانات حسابات المساجد</h3>
+                            </div><!-- /.box-header -->
+                            <div class="box-body">
+                                <div id="mosques_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                                    <div class="row">
+                                        <div class="col-sm-6"></div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="mosques" class="table table-bordered table-hover dataTable"
+                                                role="grid" aria-describedby="mosques_info">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="sorting_asc" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1" aria-sort="ascending">
+                                                            إسم المسجد</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            إسم المستخدم</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            تاريخ التسجيل</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            هل تم تحديث الطلبات هذا الشهر ؟</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            المنطقة</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            الإمام</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="mosques"
+                                                            rowspan="1" colspan="1">
+                                                            المؤذن</th>
+                                                            <th  tabindex="0" rowspan="1" colspan="1">
+                                                                إدارة</th>                                                    
+                                                            </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr role="row" class="odd">
+                                                        <td rowspan="2" class="sorting_1">مسجد الإيمان</td>
+                                                        <td rowspan="2">f$f43583#%#</td>
+                                                        <td rowspan="2">13/12/2020</td>
+                                                        <td rowspan="2" class="btn-success">نعم</td>
+                                                        <td rowspan="2"class="">خيطان</td>
+                                                        <td  class="">هزاع سعد </td>
+                                                        <td class="">عماد خالد</td>
+                                                        <td class="text-center">
+                                                            <!-- Edit -->
+                                                            <a class="btn btn-success">
+                                                                <i class="fa fa-edit"></i> تعديل
+                                                              </a>
+                                                            <!-- Delete -->
+                                                            <a class="btn btn-danger">
+                                                                <i class="fa fa-trash"></i> حذف
+                                                              </a>
+                                                            <!-- Orders -->
+                                                            <a class="btn btn-primary">
+                                                                <i class="fa fa-fa-shopping-cart"></i> الطلبات
+                                                              </a>
+                                                            </td>
+                                                    </tr>
+                                                    
+                                                <tfoot>
+                                                    <tr>
+                                                        <th rowspan="1" colspan="1">إسم المسجد</th>
+                                                        <th rowspan="1" colspan="1">إسم المستخدم</th>
+                                                        <th rowspan="1" colspan="1">تاريخ التسجيل</th>
+                                                        <th rowspan="1" colspan="1">هل تم الطلب هذا الشهر ؟</th>
+                                                        <th rowspan="1" colspan="1">المنطقة</th>
+                                                        <th rowspan="1" colspan="1">إدارة</th>
+                                                        <th rowspan="1" colspan="1">المؤذن</th>
+                                                        <th rowspan="1" colspan="1">إدارة</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <!-- </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="mosques_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example2_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div> -->
+                                        </div><!-- /.box-body -->
+                                    </div><!-- /.box -->
+
+                                    <!-- /.box -->
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+            </section><!-- /.content -->
+        </div>
+
+        <!-- jQuery 2.1.4 -->
+        <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <!-- Bootstrap 3.3.4 -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="plugins/fastclick/fastclick.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- page script -->
+        <script>
+            $(function () {
+                $('#mosques').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>

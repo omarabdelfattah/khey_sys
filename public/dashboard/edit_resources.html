@@ -1,0 +1,221 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AdminLTE 2 | Data Tables</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.4 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="skin-blue sidebar-mini" dir="rtl">
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="../../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>الخير</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>جمعية الخير</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">محمد أحمد</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar" style="height: auto;">
+
+
+
+
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa  fa-list"></i>                            
+                            <span>المساجد</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المساجد</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مسجد</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa  fa-archive"></i>                            
+                            <span>المخازن</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المخازن</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مخزن</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> موارد المخزن </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-th" aria-hidden="true"></i>                            
+                            <span>الموارد</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة الموارد</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مورد</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>                            
+                            <span>الطلبات</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة الطلبات</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-users"></i>                            
+                            <span>المستخدمين</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="#"><i class="fa fa-circle-o"></i> قائمة المستخدمين</a></li>
+                            <li><a href="#"><i class="fa fa-circle-o"></i> إضافة مستخدم</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+              <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    تعديل بيانات مورد    
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> الرئيسية</a></li>
+                    <li><a href="#">الموارد</a></li>
+                    <li class="active">تعديل بيانات مورد</li>
+                  </ol>
+            </section>
+            <section class="content">
+                <div class="col-md-12">
+                    <div class="box box-success">
+                    <div class="box-header">
+                    </div>
+                    <div class="box-body">
+
+                        <div class="form-group">
+                            <label for="mosq_name" class=" control-label">إسم المورد</label>
+                              <input type="text" class="form-control" id="mosq_name" placeholder="إسم المورد">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="quantity" class=" control-label">الكمية الشهرية</label>
+                              <input type="number" class="form-control" id="quantity" placeholder="الكمية الشهرية">
+                          </div>
+
+                         
+
+                    </div><!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-success">إرسال</button>
+                      </div>
+                    </div><!-- /.box -->
+    
+
+    
+                </div>
+            </section>
+
+        </div>        
+        <!-- jQuery 2.1.4 -->
+        <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <!-- Bootstrap 3.3.4 -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <!-- SlimScroll -->
+        <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="plugins/fastclick/fastclick.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
+        <!-- page script -->
+        <script>
+            $(function () {
+                $('#mosques').DataTable({
+                    "paging": true,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false
+                });
+            });
+        </script>
+
+
+</body>
+
+</html>
