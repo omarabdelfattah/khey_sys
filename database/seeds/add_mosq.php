@@ -16,7 +16,6 @@ class add_mosq extends Seeder
         $resource->username = "aleman123";
         $resource->name = "الإيمان";
         $resource->password = bcrypt(123);
-        $resource->last_order = null;
         $resource->area = "خيطان";
         $resource->emam = "محمد أحمد";
         $resource->moazen = "صلاح السيد";

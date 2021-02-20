@@ -18,7 +18,7 @@ class CreateOrdersItemsTable extends Migration
             $table->timestamps();
             $table->biginteger("order_id")->unsigned();
             $table->foreign("order_id")->references("id")->on('orders')->onDelete('cascade');;
-            $table->biginteger("resource_id")->nullable()->unsigned();
+            $table->biginteger("resource_id")->unsigned();
             $table->foreign("resource_id")->references("id")->on('resources')->onDelete('set null');;
         });
     }

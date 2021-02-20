@@ -72,21 +72,21 @@
                             <div class="form-group col-sm-12 col-md-12">
                                 <div class=" custom-control custom-radio custom-control">
                                     <input type="radio" id="stat1" name="input_monthly_needs"
-                                        class="custom-control-input" onchange="no_need()">
+                                        class="custom-control-input"  value="0" onchange="no_need()">
                                     <label class="custom-control-label" for="stat1">لا يحتاج مواد نظافة</label>
                                 </div>
                             </div>
                             <div class="form-group col-sm-12 col-md-12">
                                 <div class=" custom-control custom-radio custom-control">
                                     <input type="radio" id="stat2" name="input_monthly_needs"
-                                        class="custom-control-input"  onchange="no_need()">
+                                        class="custom-control-input" value="1"  onchange="no_need()">
                                     <label class="custom-control-label" for="stat2">يحتاج مواد النظافة كامة</label>
                                 </div>
                             </div>
                             <div class="form-group col-sm-12 col-md-12">
                                 <div class="custom-control custom-radio custom-control">
                                     <input type="radio" id="stat3" name="input_monthly_needs"
-                                        class="custom-control-input"  onchange="need()">
+                                        class="custom-control-input" value="2"  onchange="need()">
                                     <label class="custom-control-label" for="stat3"> يحتاج الي مواد نظافة ولا يحتاج
                                         للأخرى</label>
                                 </div>

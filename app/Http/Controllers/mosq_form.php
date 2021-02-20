@@ -21,8 +21,8 @@ class mosq_form extends Controller
         // Check if this month ordering available or not
 
      
-            $last = date("m",strtotime(Auth::user()->last_order));
-            $now = date('m');
+            $last = date("Y-m",strtotime(Auth::user()->last_order));
+            $now = date('Y-m');
             if( $last == $now ){
                 return view("front.no_form",compact('page_title'));
             }
@@ -37,14 +37,24 @@ class mosq_form extends Controller
             $order->order_status = 0;
             $order->save();
     
+            
+        if($request->input_monthly_needs == 1){
+            $items = Resource::get(['id']);
+        }elseif($request->input_monthly_needs == 2){
             $items = $request->order_items;
-
-             foreach($items as $item_id){
-                order_item::create([
-                    'resource_id'       =>  $item_id ,
-                    'order_id'          =>  $order->id          
-                ]);
+        }
+        if($request->input_monthly_needs > 0){
+            $order_items = [];
+            foreach($items as $item_key => $item_id  ){
+                $order_items[] = [
+                    'order_id'      => $order->id,
+                    'resource_id'   =>  $item_id['id']
+                ];
             }
+            foreach($order_items as $order_item){
+                order_item::create($order_item);
+            }
+        }
 
             return \Redirect::route('form')->with('success', 'تم الحفظ بنجاح !');
 

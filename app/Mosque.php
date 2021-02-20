@@ -15,7 +15,7 @@ class Mosque extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'username', 'password','last_order','area','moazen','emam'
+        'name', 'username', 'password','area','moazen','emam'
     ];
 
     /**

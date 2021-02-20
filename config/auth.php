@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'mosques',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
 
         'api' => [
             'driver' => 'token',
@@ -65,9 +69,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'admins' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Admin::class,
         ],
         'mosques' => [
             'driver' => 'eloquent',

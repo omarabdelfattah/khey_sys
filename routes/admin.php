@@ -12,9 +12,17 @@
 */
 
 /* Login Routes*/
-Route::group(['middleware' => 'guest','prefix' => "admin"], function(){
-    Route::get('/login', 'admin_controller@login' )->name('login');
-    Route::post('/login', 'admin_controller@login_check' )->name('login');
+Route::group(['prefix' => "admin"], function(){
+    
+    Route::group(['middleware' => 'guest'],function(){
+        Route::get('login', 'admin_controller@login' )->name('admin_login');
+        Route::post('login', 'admin_controller@login_check' )->name('admin_login');
+    });
+
+    Route::group(['middleware' => 'auth:admin'],function(){
+        Route::get('logout', 'admin_controller@logout' )->name('admin_logout');
+        Route::get('/', 'admin_controller@show_dashboard' )->name('dashboard');
+    });
 });
 
 

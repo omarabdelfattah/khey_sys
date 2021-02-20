@@ -2,9 +2,9 @@
 
 <div class="container container d-flex justify-content-center align-items-center min-vh-100">
             <div class="col-sm-6 code-form text-center">
-                <h5>تسجيل الدخول</h5>
+                <h5>تسجيل الدخول للإدارة</h5>
                 <br>
-                <form method="POST" action="{{Route('login')}}">
+                <form method="POST" action="{{Route('admin_login')}}">
                 {{ csrf_field() }}
                   <div class="form-group row">
                     <div class="col-sm-4">

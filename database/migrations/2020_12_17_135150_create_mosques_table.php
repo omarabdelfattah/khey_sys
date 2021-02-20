@@ -19,7 +19,6 @@ class CreateMosquesTable extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('password');
-            $table->date('last_order')->nullable();
             $table->string('area');
             $table->string('emam');
             $table->string('moazen');
