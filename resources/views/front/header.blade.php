@@ -9,3 +9,4 @@
     <link rel="stylesheet" href="{{ asset('front-template/css/style.css') }}">
 </head>
 <body class="">
+<div class="wrapper h-100">

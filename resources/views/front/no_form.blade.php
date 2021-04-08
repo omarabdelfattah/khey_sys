@@ -23,17 +23,33 @@
     </div>
 </nav>
 <!-- End of navbar -->
-<div class="container">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="form-box col-sm-8 h-100">
-            <div class="row text-ceneter">
-                <h4 class="col-sm-12 text-center">شهر {{ now()->month}} / {{now()->year }} </h4>
-            </div>
-            <br><br><br>
-            <h3 class="text-center">تم إرسال الطلب هذا الشهر بالفعل</h3>
-        </div>
 
+
+
+
+ <!-- End of header -->
+<div class="content h-100">
+    <div class="container">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="form-box col-sm-8 h-100">
+                    <div class="row text-ceneter">
+                        <h4 class="col-sm-12 text-center">شهر {{ now()->month}} / {{now()->year }} </h4>
+                    </div>
+                    <br><br><br>
+                    @if($status == 0)
+                        <h3 class="text-center">{{ "تم إرسال الطلب وجاري المراجعة" }}</h3>
+                    @elseif($status == 2)
+                        <h3 class="text-center">{{ "تم إرسال الطلب وتم الموافقة عليه" }}</h3>
+                    @else
+                        <h3 class="text-center">{{ "تم إرسال الطلب لكن تم رفضه" }}</h3>
+                        <h4 class="text-center">{{ "يرجي التواصل مع الإدارة" }}</h4>
+                    @endif
+
+                </div>
+
+            
+            </div>  
     </div>
 </div>
-</div>
 @include('front.footer')
+ 

@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call(add_resources::class);
         $this->call(add_mosq::class);
-
+        $this->call(add_admin_groups::class);
+        $this->call(add_admins::class);
     }
 }

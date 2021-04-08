@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "cairo";
+    src: url("../fonts/Cairo-Regular.ttf");
+  }
+body{
+    font-family: cairo;
+    direction: rtl;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a,
+a:hover{
+  text-decoration: none;
+}
+html, body{         min-height: 100vh;
+}      
+.custom-control.custom-checkbox{padding-left: 0;}
+
+label.custom-control-label {
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+label.custom-control-label::before, label.custom-control-label::after{
+  right: 0;
+  left: auto;
+}
+.header{
+  padding: 6rem;
+  /* margin: 52px 0; */
+  /* background-image: url(../img/islamic-pattern.webp); */
+  margin: auto;
+  background: #000000d6;
+  color: white;
+}
+.form-box{
+  /* background-color: #DCE1E9; */
+  padding: 50px;
+  /* border-radius: 6px; */
+  /* box-shadow: 3px 2px 6px 0px; */
+  text-align: right;
+}
+.form-box .form-wrapper{
+  padding: 18px 0;
+}
+.footer {
+  background: #000000d6;
+  color: white;  
+  padding: 15px 0;
+  text-decoration: none;
+  margin-top: 12px;
+  overflow: hidden;
+ 
+}
+.code-form {
+  background-color: #DCE1E9;
+  padding: 50px;
+  border-radius: 6px;
+  box-shadow: 3px 2px 6px 0px;
+}
+.content{
+  min-height: 100vh;
+  margin: 24vh 0;
+
+}

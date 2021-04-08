@@ -13,7 +13,7 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'mosq_id', 'status',
+        'mosq_id', 'status', 'created_at'
     ];
 
     /**
@@ -24,5 +24,15 @@ class Order extends Model
     protected $hidden = [
         'password'
     ];
+    
+    public function order_items(){
+        return $this->hasMany('App\order_item','order_id','id');
+    }
 
+    public function Mosque(){
+        return $this->hasOne('App\Mosque','id','mosq_id');
+    }
+
+
+ 
 }

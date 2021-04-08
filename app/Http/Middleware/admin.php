@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Middleware;
-use Illuminate\Support\Facades\Auth;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
-class admin
+class admin 
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,14 @@ class admin
      */
     public function handle($request, Closure $next = null, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect(Route('admin_dashboard'));
+
+
+        if (auth()->guard("admin")->check()) {
+            return redirect(Route("dashboard"));
         }
+
         return $next($request);
     }
+
+
 }

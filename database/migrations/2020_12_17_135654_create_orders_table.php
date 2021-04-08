@@ -14,10 +14,14 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->bigincrements('id');
             $table->timestamps();
-            $table->biginteger("mosq_id")->unsigned();
+            $table->string('name');
+            $table->integer('phone');
+            $table->integer("mosq_id")->length(10)->unsigned();
             $table->foreign("mosq_id")->references("id")->on('mosques')->onDelete('cascade');
+ 
             $table->boolean('order_status');
 
         });
