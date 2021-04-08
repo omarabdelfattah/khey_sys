@@ -14,7 +14,8 @@ class CreateMosquesTable extends Migration
     public function up()
     {
         Schema::create('mosques', function (Blueprint $table) {
-            $table->bigincrements('id');
+            $table->engine = 'InnoDB';
+            $table->increments('id');
             $table->timestamps();
             $table->string('name');
             $table->string('username')->unique();

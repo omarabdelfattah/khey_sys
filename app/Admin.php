@@ -10,6 +10,7 @@ class Admin extends Authenticatable
     use Notifiable;
 
     protected $table = 'admins';
+    // protected $guard = 'admin';
 
     /**
      * The attributes that are mass assignable.
@@ -30,4 +31,11 @@ class Admin extends Authenticatable
     ];
     protected $rememberTokenName = false;
 
-}
+    public function group_id(){
+        return $this->hasOne('App\AdminGroup','id','role');
+    }
+    
+    public function group(){
+        return $this->hasOne('App\AdminGroup','id','role');
+    }
+ }

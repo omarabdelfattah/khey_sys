@@ -18,15 +18,19 @@ class mosq_form extends Controller
         $page_title = 'إضافة طلبات المسجد الشهرية';
 
         
-        // Check if this month ordering available or not
+        // Check if this month ordering available or not    
+            $last_order = Order::where("mosq_id", Auth::user()->id)->orderBy("created_at","desc")->first();
+            if(isset($last_order)){
+                $status = $last_order->order_status;
+                if(isset($last_order)){
+                    $last = date("Y-m",strtotime($last_order->created_at));
+                    $now = date('Y-m');
 
-     
-            $last = date("Y-m",strtotime(Auth::user()->last_order));
-            $now = date('Y-m');
-            if( $last == $now ){
-                return view("front.no_form",compact('page_title'));
+                    if( $last == $now ){
+                        return view("front.no_form",compact('page_title','status'));
+                    }
+                }
             }
-
         $resources = Resource::get(['name','id']);
         return view("front.form",compact('page_title','resources'));
     }
@@ -35,20 +39,28 @@ class mosq_form extends Controller
             $order = new Order();
             $order->mosq_id = Auth::id();
             $order->order_status = 0;
+            $order->name = $request->inputmosq_manager_name;
+            $order->phone = $request->inputmosq_manager_phone;
             $order->save();
     
             
         if($request->input_monthly_needs == 1){
-            $items = Resource::get(['id']);
+            $items_all = Resource::get(['id']);
+            foreach($items_all as $item ){
+                $items[] = $item->id;
+            }
         }elseif($request->input_monthly_needs == 2){
             $items = $request->order_items;
+
+
         }
+
         if($request->input_monthly_needs > 0){
             $order_items = [];
-            foreach($items as $item_key => $item_id  ){
+            foreach($items as  $item_id  ){
                 $order_items[] = [
                     'order_id'      => $order->id,
-                    'resource_id'   =>  $item_id['id']
+                    'resource_id'   =>  $item_id
                 ];
             }
             foreach($order_items as $order_item){

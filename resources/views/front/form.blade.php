@@ -45,8 +45,7 @@
                     <div class="container">
                         
                         <div class="form-group row">
-                            <label for="inputmosq_manager_name" class="col-sm-4 col-form-label">اسم المؤذن /
-                                الإمام</label>
+                            <label for="inputmosq_manager_name" class="col-sm-4 col-form-label">إسم مقدم الطلب</label>
                             <div class="col-sm">
                                 <input type="text" class="form-control" name="inputmosq_manager_name"
                                     id="inputmosq_manager_name" placeholder="محمد علي">

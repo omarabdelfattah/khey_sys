@@ -17,7 +17,8 @@ class add_admins extends Seeder
         $user->name = "محمد أحمد";
         $user->username = "mohamed";
         $user->password = bcrypt(123456);
-        $user->role = 0;
+        $user->role = 2;
+        $user->protected = 0;
         $user->save();
 
         $user = new Admin();
@@ -25,13 +26,16 @@ class add_admins extends Seeder
         $user->username = "salah";
         $user->password = bcrypt(123456);
         $user->role = 1;
+        $user->protected = 0;
+
         $user->save();
 
         $user = new Admin();
         $user->name = "عمر عبدالفتاح";
         $user->username = "omar";
         $user->password = bcrypt(123456);
-        $user->role = 2;
+        $user->role = 1;
+        $user->protected = 1;
         $user->save();
 
     }

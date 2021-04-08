@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model
 {
-    protected $table = 'resources';
+    protected $table = "resources";
     //
         /**
      * The attributes that are mass assignable.
@@ -22,4 +22,8 @@ class Resource extends Model
      *
      * @var array
      */
+    public function order_items(){
+        return $this->belongsToMany('App\order_item','resource_id','id');
+    }
+
 }

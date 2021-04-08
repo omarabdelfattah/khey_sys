@@ -23,4 +23,22 @@ class order_item extends Model
      * @var array
      */
 
+        //
+        /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+
+    
+    public function order(){
+        return $this->belongsTo('App\Order','id','order_id');
+    }
+
+    public function resource(){
+        return $this->hasOne('App\Resource','id','resource_id');
+    }
+
+     
+    
 }
